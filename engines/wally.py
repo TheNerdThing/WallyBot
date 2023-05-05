@@ -12,3 +12,4 @@ class Wally(MinimalEngine):
     def search(self, board: chess.Board, *args: any) -> PlayResult:
         whiteToMove = chess.Board.turn == chess.WHITE
         runSavedBot.find_best_move(board, DEPTH,whiteToMove)
+        

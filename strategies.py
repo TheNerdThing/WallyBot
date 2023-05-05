@@ -11,6 +11,17 @@ import random
 from engine_wrapper import MinimalEngine
 from typing import Any
 
+import sys
+import os
+sys.path.append(os.path.join(sys.path[0],'../'))
+import runSavedBot
+
+
+class Wally(MinimalEngine):
+    def search(self, board: chess.Board, *args: any) -> PlayResult:
+        # whiteToMove = board.turn == chess.WHITE
+        return PlayResult(runSavedBot.find_best_move(board, 3, True), None)
+        
 
 class ExampleEngine(MinimalEngine):
     """An example engine that all homemade engines inherit."""
