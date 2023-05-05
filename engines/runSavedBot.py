@@ -68,24 +68,6 @@ def minimax(board, depth, alpha, beta, maximizing_player):
         return best_score
 
 
-if __name__ == '__main__':
-    model = tf.keras.models.load_model('saved_model')
-    
-    board = chess.Board()
-    depth = 3
 
-    while not board.is_game_over():
-        print(board)
-        print()
-
-        if board.turn == chess.WHITE:
-            move = find_best_move(board, depth, True)
-            print(move)
-        else:
-            move = chess.Move.from_uci(input(prompt='Move: '))
-            
-
-        board.push(move)
-
-    print("Game over")
-    print("Result:", board.result())    
+model = tf.keras.models.load_model('corrected_12mil_25epoch_64batch_0.0001learnRate')
+print('loading model')

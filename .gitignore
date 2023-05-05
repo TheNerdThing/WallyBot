@@ -3,4 +3,5 @@ __pycache__
 test_bot/__pycache__
 !/engines/README.md
 !/engines/saved_model
+!/engines/corrected_12mil_25epoch_64batch_0.0001learnRate/
 /venv/*
