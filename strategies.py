@@ -20,7 +20,7 @@ import runSavedBot
 class Wally(MinimalEngine):
     def search(self, board: chess.Board, *args: any) -> PlayResult:
         # whiteToMove = board.turn == chess.WHITE
-        return PlayResult(runSavedBot.find_best_move(board, 3, True), None)
+        return PlayResult(runSavedBot.find_best_move(board, 3, board.turn), None)
         
 
 class ExampleEngine(MinimalEngine):

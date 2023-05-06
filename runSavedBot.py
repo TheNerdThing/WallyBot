@@ -27,6 +27,7 @@ def find_best_move(board, depth, maximizing_player):
         for move in board.legal_moves:
             board.push(move)
             score = minimax(board, depth - 1, float('-inf'), float('inf'), True)
+            print(move, score)
             if score < best_score:
                 best_score = score
                 best_move = move
